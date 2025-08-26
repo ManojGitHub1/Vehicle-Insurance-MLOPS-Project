@@ -26,6 +26,40 @@
 16. EDA and Feature Engg notebook added.
 
 ----------------------------------------------- Data Ingestion -----------------------------------------------
+
+    Workflow - in Notion
+    constants
+    config_entity
+    artifact_entity
+    component
+    pipeline
+    app.py/demo.py
+
+    Pipeline - Process flow
+    logging
+    exception
+    constants
+    config_entity, artifact_entity
+    component
+    pipeline
+    run pipeline
+
+Using and Logging and Exception to Traceback the Error (Can also see in logs folder)
+
+Traceback (most recent call last):
+  File "C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\demo.py", line 27, in <module>
+    pipline.run_pipeline()
+  File "C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\pipline\training_pipeline.py", line 146, in run_pipeline
+    raise MyException(e, sys)
+src.exception.MyException: Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\pipline\training_pipeline.py] at line number [133]: 
+Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\pipline\training_pipeline.py] at line number [47]: 
+Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\components\data_ingestion.py] at line number [86]: 
+Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\components\data_ingestion.py] at line number [34]: 
+Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\data_access\proj1_data.py] at line number [20]: 
+Error occurred in python script: [C:\Users\HP\Downloads\ML\Vehicle-Insurance-MLOPS-Project\src\configuration\mongo_db_connection.py] at line number [51]: 
+Environment variable 'MONGODB_URL' is not set.
+
+
 17. Before we work on "Data Ingestion" component >> Declare variables within constants.__init__.py file >> 
     add code to configuration.mongo_db_connections.py file and define the func for mondodb connection >> 
     Inside "data_access" folder, add code to proj1_data that will use mongo_db_connections.py
@@ -39,8 +73,16 @@
     set: export MONGODB_URL="mongodb+srv://<username>:<password>......"
     check: echo $MONGODB_URL
                         *** For Powershell ***
+
+                        *** if using venv you have to set everytime if you kill the terminal ***
     set: $env:MONGODB_URL = "mongodb+srv://<username>:<password>......"
     check: echo $env:MONGODB_URL
+
+                    OR
+
+    We also can create a .env file in our project folder
+
+                    OR
 
     To setup the connection url on Windows, open env variable setting option and add a new variable:
     Name: MONGODB_URL, Value = <url>
