@@ -39,7 +39,7 @@ This diagram illustrates the flow of data from ingestion to prediction, includin
 
 | Category                 | Technologies                                      |
 |---------------------------|--------------------------------------------------|
-| Programming               | Python 3.10                                      |
+| Programming               | Python 3.12                                      |
 | Data & Model Storage      | MongoDB Atlas, AWS S3                            |
 | ML Lifecycle              | Scikit-learn, Pandas, NumPy                      |
 | CI/CD & Automation        | GitHub Actions, Docker, AWS ECR, Self-Hosted Runners |
