@@ -22,6 +22,8 @@ It is designed to highlight **proficiency in data engineering, machine learning 
 ## 🏛️ High-Level System Architecture
 
 This diagram illustrates the flow of data from ingestion to prediction, including the automated CI/CD pipeline for deployment.
+<img width="889" height="840" alt="Workflow" src="https://github.com/user-attachments/assets/d14f7784-4fc4-422a-aa7a-5c2b5d30741e" />
+
 
 ## 🚀 Key Features & Technical Highlights
 1. **End-to-End ML Pipeline Automation** – From data ingestion to model deployment, ensuring reproducibility and efficiency.
@@ -120,5 +122,6 @@ This project provides a scalable & automated solution for the insurance industry
 - 🔁 Automated Retraining – Trigger retraining when performance drops.
 - 🧪 A/B Testing – Safely deploy new models alongside production ones.
 - 🏗️ Infrastructure as Code (IaC) – Use Terraform or AWS CDK for reproducible cloud infra.
+
 
 
